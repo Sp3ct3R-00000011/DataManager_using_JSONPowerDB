@@ -1,0 +1,539 @@
+
+<html>
+<head>
+<link rel="stylesheet" href="css/style_neww_h.css">
+<link rel="stylesheet" href="css/style_new.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Cormorant+Upright:300,400,500,600,700&amp;subset=latin-ext,vietnamese" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<style>
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+position: fixed;
+
+left: 0px;
+
+top: 0px;
+
+width: 100%;
+
+height: 100%;
+
+z-index: 9999;
+
+background: url(../static/images/loading.gif) center no-repeat #fff;
+
+    background-color: rgb(255, 255, 255);
+
+background-color: #e5eff1;
+}
+
+</style>
+<script>
+	$(window).load(function() {
+
+		$(".se-pre-con").fadeOut("slow");;
+	});
+</script>
+</head>
+
+<body class="main">
+<div class="se-pre-con"></div>
+<div class="first">
+<div class="bg">
+<div class="in-first">
+<div class="up">
+<div class="top">
+<div class="right">
+<h2>
+Data Manager App
+</h2>
+
+</div>
+
+<div class="left">
+
+<a href="#" class="link1"><i class= "fa fa-facebook"  ></i></a>
+<a href="#" class="link2"><i class="fa fa-twitter"  ></i></a>
+<a href="#" class="link3"><i class="fa fa-rss"  ></i></a>
+<a href="#" class="link4"><i class="fa fa-vk" ></i></a>
+
+
+</div>
+</div>
+
+<div class="sec-top" id="mydrop">
+<ul class="sec-top">
+<li id="one-l"><a href="index.html" >Home</a></li>
+<li id="two-l"><a href="about.html" >About</a></li>
+<li id="three-l"  class="selected"><a href="operations.html" >Operations</a></li>
+<li id="four-l"><a href="http://login2explore.com/jpdb/docs.html" >Documentation</a></li>
+<li id="five-l"><a href="feedback.html" >Feedback</a></li>
+<li id="six-l"><a href="data.html" >See Data</a></li>
+<li id="seven-l"><a href="contactme.html" >Contact</a></li>
+</ul>
+</div>
+
+</div>
+
+</div>
+</div>
+<script>
+   
+    $(document).ready(function() {
+        $("#ins").hide();
+		 $("#ret").hide();
+		  $("#upd").hide();
+		   $("#del").hide();
+	 $("#res").hide();
+ $("#ret_data_btn").click(function() {
+            $("#ff").hide();
+            $("#ins").hide();
+		 $("#res").show();
+			$("#ret").hide();
+		  $("#upd").hide();
+		   $("#del").hide();
+
+        });
+        $("#ins_btn").click(function() {
+            $("#ff").hide();
+            $("#ins").show();
+		
+			$("#ret").hide();
+		  $("#upd").hide();
+		   $("#del").hide();
+
+        });
+		        $("#ret_btn").click(function() {
+            $("#ff").hide();
+            $("#ret").show();
+			$("#ins").hide();
+			
+		  $("#upd").hide();
+		   $("#del").hide();
+
+        });
+		        $("#upd_btn").click(function() {
+            $("#ff").hide();
+            $("#upd").show();
+			$("#ret").hide();
+		
+		  $("#ins").hide();
+		   $("#del").hide();
+
+        });
+		        $("#del_btn").click(function() {
+            $("#ff").hide();
+            $("#del").show();
+			$("#ret").hide();
+		  $("#upd").hide();
+		   $("#ins").hide();
+		  
+
+        });
+
+    });
+</script>
+
+</div>
+<div class= "container1">
+<div class = "top">
+<h1>Welcome to Mini Data Manager !!!</h1>
+<h3> Upload and Download your data from anywhere and in any format...</h3>
+
+</div>
+
+<div class= "container2" >
+<div class = "first-form" id = "ff">
+	<div class="form">
+	<h2> Operations : </h2>
+	
+	<div class="inputbox">
+		<input type="submit"   id='ins_btn' value="Insert Data" >
+		</div>
+<div class="inputbox">
+		<input type="submit"   id='ret_btn' value="Retrieve/ View Data" >
+		</div>
+		<div class="inputbox">
+		<input type="submit"   id='upd_btn' value="Update Data" >
+		</div>
+		<div class="inputbox">
+		<input type="submit"   id='del_btn' value="Delete Data" >
+		</div>
+</div>
+</div>
+
+<script>
+    function GetFormData() {
+var c_name = $("#c_name").val();
+if (c_name === "") {
+alert(" Collection name is Required to proceed!!");
+$("#c_name").focus();
+return "";
+}
+var k1 = $("#k1").val();
+if (k1 === "") {
+alert("name is Required!!");
+$("#k1").focus();
+return "";
+}
+
+var k2 = $("#k2").val();
+if (k2 === "") {
+alert("class is Required!!");
+$("#k2").focus();
+return "";
+}
+
+var k3 = $("#k3").val();
+if (k3 === "") {
+alert("fathers name is Required!!");
+$("#k3").focus();
+return "";
+}
+
+var k4 = $("#k4").val();
+if (k4 === "") {
+alert("mothers name is Required!!");
+$("#k4").focus();
+return "";
+}
+
+var k5 = $("#k5").val();
+if (k5 === "") {
+alert("address  is Required!!");
+$("#k5").focus();
+return "";
+}
+var k5 = $("#k6").val();
+if (k6 === "") {
+alert("Value for Mobile no is Required !!");
+$("#k6").focus();
+return "";
+}
+var jsonStrObj = {
+name: String(k1),
+class_student: String(k2)
+fathers_name: String(k3),
+mothers_name: String(k4)
+address: String(k5),
+mob: String(k6)
+
+};
+return JSON.stringify(jsonStrObj), c_name;
+    }
+    // This method is used to create PUT Json request.
+function createPUTRequest(connToken, jsonObj, dbName, relName) {
+var putRequest = "{\n"
++ "\"token\" : \""
++ connToken
++ "\","
++ "\"dbName\": \""
++ dbName
++ "\",\n" + "\"cmd\" : \"PUT\",\n"
++ "\"rel\" : \""
++ relName + "\","
++ "\"jsonStr\": \n"
++ jsonObj
++ "\n"
++ "}";
+return putRequest;
+}
+function executeCommand(reqString, dbBaseUrl, apiEndPointUrl) {
+var url = dbBaseUrl + apiEndPointUrl;
+var jsonObj;
+$.post(url, reqString, function (result) {
+jsonObj = JSON.parse(result);
+}).fail(function (result) {
+var dataJsonObj = result.responseText;
+jsonObj = JSON.parse(dataJsonObj);
+});
+return jsonObj;
+}
+function resetForm() {
+$("#c_name").val("")
+$("#k1").val("");
+
+$("#k2").val("");
+
+$("#k3").val("");
+
+$("#k4").val("");
+
+$("#k5").val("");
+
+$("#k6").val("");
+
+$("#c_name").focus();
+}
+function insertData()
+{
+    var jsonStr, c_name = GetFormData();
+if (jsonStr === "") {
+return;
+}
+var reltn = c_name + "-REL"
+var putReqStr = createPUTRequest("90935450|-31948798143766223|90931479",
+jsonStr,c_name , reltn);
+alert(putReqStr);
+jQuery.ajaxSetup({async: false});
+var resultObj = executeCommand(putReqStr,
+"http://api.login2explore.com:5577", "/api/iml");
+alert(JSON.stringify(resultObj));
+jQuery.ajaxSetup({async: true});
+resetForm();
+}
+</script>
+
+<div class = "first-form" id = "ins">
+	<div class="form">
+	<h2> Insert :   </h2>
+<form action="" method="post" >
+
+		<div class="inputbox">
+		<input type = "text" name = "c_name" placeholder="Class_name for naming collection" id = 'c_name'>
+		</div>
+		<br>
+		<div class="inputbox">
+		<input type = "text" name = "k1" placeholder="Students_name" id = 'k1'>
+		</div>
+		
+		<div class="inputbox">
+		<input type = "text" name = "k2" placeholder="Section" id = 'k2'>
+		</div>
+	
+		<div class="inputbox">
+		<input type = "text" name = "k3" placeholder="Fathers name" id = 'k3'>
+		</div>
+	
+		<div class="inputbox">
+		<input type = "text" name = "k4" placeholder="Mothers name" id = 'k4'>
+		</div>
+		
+		<div class="inputbox">
+		<input type = "text" name = "k5" placeholder="Address" id = 'k5'>
+		</div>
+		<div class="inputbox">
+		<input type = "text" name = "k6" placeholder="Mobile No." id = 'v5'>
+		</div>
+		
+	<div class="inputbox">
+		<a href = ""><input type="submit"   id='ins_data_btn' value="Insert"  onclick="insertData();"></a>
+		</div>
+</form>
+</div>
+</div>
+
+
+  <script>
+        function GetFormData() {
+var c_name = $("#c_name_show").val();
+if (c_name === "") {
+alert(" Collection name is Required to proceed!!");
+$("#c_name_show").focus();
+return "";
+}
+var k1 = $("#k1_search").val();
+if (k1 === "") {
+alert("name is Required!!");
+$("#k1_search").focus();
+return "";
+}
+
+return  c_name, k1;
+    }
+		function executeCommand(reqString, dbBaseUrl, apiEndPointUrl) {
+		 
+            var url = dbBaseUrl + apiEndPointUrl;
+            var jsonObj;
+            $.post(url, reqString, function (result) {
+                jsonObj = JSON.parse(result);
+            }).fail(function (result) {
+                var dataJsonObj = result.responseText;
+                jsonObj = JSON.parse(dataJsonObj);
+            });
+            return jsonObj;
+        }
+        function showData(){
+			var c_name, k1 = GetFormData();
+            var token = "90935450|-31948798143766223|90931479";
+            var dbname = c_name;
+            var relationName = c_name + "-REL";
+            
+            var jsonStr = {
+                name : k1
+            };
+            var reqString = createGETRequest(token, dbname, relationName, JSON.stringify(jsonStr));
+            alert(reqString);
+            jQuery.ajaxSetup({async: false});
+            var resultObj = executeCommand(reqString,
+                    "http://api.login2explore.com:5577", "/api/iml");
+            jQuery.ajaxSetup({async: true});
+            
+            var data = JSON.stringify(resultObj);
+            
+           
+            var mainContainer = document.getElementById("show");
+            mainContainer.innerHTML = data; 
+
+            
+        }
+    </script>
+<div class = "first-form" id = "ret">
+	<div class="form">
+	<h2> Retrieve : </h2>
+	<form action="" method="post" >
+
+		<div class="inputbox">
+		<input type = "text" name = "c_name" placeholder="Class_name" id = 'c_name_show'>
+		</div>
+		<br>
+		<div class="inputbox">
+		<input type = "text" name = "k1" placeholder="Students_name" id = 'k1_search'>
+		</div>
+		
+		
+	<div class="inputbox">
+		<a href = ""><input type="submit"   id='ret_data_btn' value="Show"  onclick="showData();"></a>
+		</div>
+</form>
+	
+</div>
+</div>
+<div class = "first-form" id = "res">
+	<div class="form">
+	<h2 id = "show">  </h2>
+	
+	
+</div>
+</div>
+ <script>
+        function executeCommand(reqString, dbBaseUrl, apiEndPointUrl) {
+            var url = dbBaseUrl + apiEndPointUrl;
+            var jsonObj;
+            $.post(url, reqString, function (result) {
+                jsonObj = JSON.parse(result);
+            }).fail(function (result) {
+                var dataJsonObj = result.responseText;
+                jsonObj = JSON.parse(dataJsonObj);
+            });
+            return jsonObj;
+        }
+        function updateData(){
+		    var c_name = document.getElementById("c_name_upd").value;
+            var token = "90935450|-31948798143766223|90931479";
+            var dbname = c_name;
+            var relationName = c_name + "-REL";
+			var up_type = document.getElementById("k1_upd").value;
+            var up_value = document.getElementById("k2_upd").value;
+        
+            
+            var jsonObj = {
+                up_type : up_value,
+            };
+            var reqString = createUPDATERecordRequest(token, JSON.stringify(jsonObj), dbname, relationName, up_value);
+            alert(reqString);
+            jQuery.ajaxSetup({async: false});
+            var resultObj = executeCommand(reqString,
+                    "http://api.login2explore.com:5577", "/api/iml");
+            jQuery.ajaxSetup({async: true});
+            alert(JSON.stringify(resultObj));
+            
+        }
+    </script>
+<div class = "first-form" id = "upd">
+	<div class="form">
+	<h2> Update : </h2>
+	<form action="" method="post" >
+
+		<div class="inputbox">
+		<input type = "text" name = "c_name" placeholder="Class_name" id = 'c_name_upd'>
+		</div>
+		<br>
+		<div class="inputbox">
+		<input type = "text" name = "k1" placeholder="What do you want to Update " id = 'k1_upd'>
+		</div>
+		<div class="inputbox">
+		<input type = "text" name = "k1" placeholder="Updated value  " id = 'k2_upd'>
+		</div>
+	
+	<div class="inputbox">
+		<a href = ""><input type="submit"   id='upd_data_btn' value="Update" onclick="updateData();" ></a>
+		</div>
+</form>
+</div>
+</div>
+
+ <script>
+        function executeCommand(reqString, dbBaseUrl, apiEndPointUrl) {
+            var url = dbBaseUrl + apiEndPointUrl;
+            var jsonObj;
+            $.post(url, reqString, function (result) {
+                jsonObj = JSON.parse(result);
+            }).fail(function (result) {
+                var dataJsonObj = result.responseText;
+                jsonObj = JSON.parse(dataJsonObj);
+            });
+            return jsonObj;
+        }
+        function deleteData(){
+		var c_name = document.getElementById("c_name_del").value;
+            var token = "90935450|-31948798143766223|90931479";
+            var dbname = c_name;
+            var relationName =  c_name + "-REL";
+            var name = document.getElementById("k1_del").value;
+
+            var reqString = createREMOVERecordRequest(token, dbname, relationName, name);
+            alert(reqString);
+            jQuery.ajaxSetup({async: false});
+            var resultObj = executeCommand(reqString,
+                    "http://api.login2explore.com:5577", "/api/iml");
+            jQuery.ajaxSetup({async: true});
+            alert(JSON.stringify(resultObj));
+            
+        }
+    </script>
+<div class = "first-form" id = "del">
+	<div class="form">
+	<h2> Delete : </h2>
+	<form action="" method="post" >
+
+		<div class="inputbox">
+		<input type = "text" name = "c_name" placeholder="Class_name" id = 'c_name_del'>
+		</div>
+		<br>
+		<div class="inputbox">
+		<input type = "text" name = "k1" placeholder="name" id = 'k1_del'>
+		</div>
+		
+	
+	<div class="inputbox">
+		<a href = ""><input type="submit"   id='del_data_btn' value="Delete" onclick="deleteData();" ></a>
+		</div>
+</form>
+	
+</div>
+</div>
+
+
+
+</div>
+
+</div>
+<br>
+<br>
+
+
+
+
+
+</div>
+
+</body>
+
+</html>
