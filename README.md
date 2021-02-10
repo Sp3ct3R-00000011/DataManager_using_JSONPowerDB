@@ -2,13 +2,12 @@
 
 
 # Description :
-## <h2> Mini Data Manager is a  web app which allows user to manage their data effeciently by creating, inserting, retrieving, updating and deleting data as per the requirements.
-	</h2>
-	<h2> 
-	In this app, you can make separate database by just giving a name you want and then you can perform any of data operation.
-	If you want to try it, then you just have to click on the OPERATION TAB which is on the top or you can click the button below:
+## Mini Data Manager is a  web app which allows user to manage their data effeciently by creating, inserting, retrieving, updating and deleting data as per the requirements.
+
+##	In this app, you can make separate database by just giving a name you want and then you can perform any of data operation.
+##	If you want to try it, then you just have to click on the OPERATION TAB which is on the top or you can click the button below:
 	
-	</h2>
+	
 # Benefits of using JsonPowerDB
 <ul> <li>JsonPowerDB (JPDB) is Next Generation, Creative and Disruptive Multi-mode DBMS_ with many USPs.</li>
  <li>Proprietary algorithm for High Performance CRUD operations. Multiple times faster than popular DBMS.</li>
